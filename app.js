@@ -1,24 +1,24 @@
 Ext.Loader.setPath({
-    'App': 'app'
+    'MyApp': 'app'
 });
 Ext.require([
-		'App.util.CommonUtil',
-		'App.util.offline.Connection',
-		'App.util.offline.Proxy',
-		'App.util.offline.Data'
+		'MyApp.util.AppUtil',
+		'MyApp.util.offline.Connection',
+		'MyApp.util.offline.Proxy',
+		'MyApp.util.offline.Data'
 ]);
 Ext.onReady(function(){
 	var dbconnval = {
         dbName: "moneysss",
         dbDescription: "MoneySSS database"
     };
-   //PatientDiary.util.CommonUtil.dbConnection = Ext.create('PatientDiary.util.offline.Connection',dbconnval);
-   //PatientDiary.util.CommonUtil.offline = Ext.create('PatientDiary.util.offline.Data',{});
+   MyApp.util.AppUtil.dbConnection = Ext.create('MyApp.util.offline.Connection',dbconnval);
+   MyApp.util.AppUtil.offline = Ext.create('MyApp.util.offline.Data',{});
 });
 Ext.application({
-    name:'App',
+    name:'MyApp',
 	 requires: [
-	 	'Ext.ux.Deferred',
+	 	/*'Ext.ux.Deferred',
 	 	'Ux.locale.Manager',
         'Ux.locale.override.st.Component',
 		'Ux.locale.override.st.Container',
@@ -33,15 +33,13 @@ Ext.application({
         'Ux.locale.override.st.tab.Panel',
 		'Ux.locale.override.st.SegmentedButton',
 	 	'Ext.ux.TouchCalendarView',
-		'Ext.ux.TimePicker'
+		'Ext.ux.TimePicker'*/
     ],   
     models:[
-    	'System',
-    	'User',
+    	'System'
     ],
     stores:[
-    	'Systems',
-    	'Users',
+    	'Systems'
 
 	],
 	startupImage: {
@@ -58,7 +56,7 @@ Ext.application({
         144: 'resources/icons/icon@144.png'
     },
 	views: ['App','AppMenu'],
-    controllers: ['App', 'AppLogin', 'AppMenu'],
+    controllers: [],
     launch: function() {
     	//if(!App.util.CommonUtil.runningDevice()){
     		this.onDeviceReady();
@@ -73,7 +71,7 @@ Ext.application({
 		    Ext.Viewport.add({
 	        	xtype: 'app'
 	    	});
-	    	var menu = Ext.create('App.view.AppMenu');
+	    	var menu = Ext.create('MyApp.view.AppMenu');
 	    	Ext.Viewport.setMenu(menu, {
 	            side: 'left',
 	            reveal: true

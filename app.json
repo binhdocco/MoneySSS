@@ -1,5 +1,5 @@
 {
-    "name": "PatientDiary",
+    "name": "MyApp",
     "indexHtmlPath": "index.html",
     "url": null,
     "js": [
@@ -26,7 +26,7 @@
     
     "css": [
         {
-            "path": "resources/css/patient_diary.css",
+            "path": "resources/css/money.css",
             "update": "delta"
         },
 		{
@@ -39,6 +39,10 @@
         },
 		{
             "path": "resources/css/menu.css",
+            "update": "delta"
+        },
+		{
+            "path": "resources/css/expense.css",
             "update": "delta"
         }
     ],
@@ -68,5 +72,5 @@
     },
     "requires": [
     ],
-    "id": "3a867610-670a-11e1-a90e-4318029d18bb"
+    "id": "3a867610-670a-11e1-a90e-moneysss"
 }
