@@ -110,12 +110,16 @@
     // Internationalization strings
     dateFormat.i18n = {
         dayNames: [
-            "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
-            "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+            //"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
+            //"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+			"Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy",
+			"Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"
         ],
         monthNames: [
-            "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-            "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            //"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+            //"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+			"Th1","Th2", "Th3", "Th4", "Th5", "Th6", "Th7", "Th8", "Th9", "Th10","Th11","Th12",
+			"Tháng 1","Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng7", "Tháng 8", "Tháng 9", "Tháng 10","Tháng 11","Tháng 12"
         ]
     };
     
