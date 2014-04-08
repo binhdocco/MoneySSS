@@ -44,6 +44,10 @@
 		{
             "path": "resources/css/expense.css",
             "update": "delta"
+        },
+		{
+            "path": "resources/css/atm.css",
+            "update": "delta"
         }
     ],
     "appCache": {

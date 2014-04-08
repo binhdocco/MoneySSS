@@ -3,7 +3,8 @@ Ext.define('MyApp.view.AppTab', {
     xtype: 'apptab',
     requires: [
        'MyApp.view.tab.Home',
-       'MyApp.view.tab.Expense'
+       'MyApp.view.tab.Expense',
+	   'MyApp.view.tab.Atm'
     ],
     config: {
         tabBarPosition: 'bottom',
@@ -14,7 +15,8 @@ Ext.define('MyApp.view.AppTab', {
 		},
 		items: [
 			{xtype:'tab_home'},
-			{xtype:'tab_expense'}
+			{xtype:'tab_expense'},
+			{xtype:'tab_atm'}
         ]
     }
 });

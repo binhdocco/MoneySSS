@@ -2,6 +2,7 @@ Ext.define('MyApp.util.AppUtil',{
 	singleton: true,
 	dbConnection: null,
 	_lang: 'en',
+	moneyUnit: '(đ)',
 	
 	setLang:function(lang){
 		this._lang = lang;
