@@ -1,5 +1,6 @@
 body {
-	font-family: 'ROBOTO-LIGHT';
+	/*font-family: 'ROBOTO-LIGHT';*/
+	font-family: 'Arial';
 }
 
 /*REVEAL MENU*/
@@ -13,7 +14,7 @@ body {
 }
 .menubutton .x-button-label{
 	text-align:left;
-	font-family: 'ROBOTO-LIGHT';
+	/*font-family: 'ROBOTO-LIGHT';*/
 	margin-left: 10px;
 }
 .x-menu {
@@ -31,7 +32,7 @@ body {
 	min-width: 20px;
 	line-height: 20px;
 	font-size: 12px;
-	font-family: 'ROBOTO-LIGHT';
+	/*font-family: 'ROBOTO-LIGHT';*/
 	padding: 0;
 	font-weight: normal;
 }
@@ -48,7 +49,7 @@ body {
 .x-mask .x-mask-inner .x-mask-message {
 	color: #979797;
 	bottom: 14px;
-	font-family: 'ROBOTO-LIGHT';
+	/*font-family: 'ROBOTO-LIGHT';*/
 	font-size: 12px;
 }
 /*segmentbutton font size*/
@@ -77,6 +78,15 @@ body {
 */
 .input_center .x-input-el {
 	text-align: center;
-	font-family: 'ROBOTO-LIGHT';
+	/*font-family: 'ROBOTO-LIGHT';*/
 }
 
+.button-icon {
+	background-color: transparent;
+	border: 0;
+}
+
+.button-icon-addnew {
+  background-image: url('../images/btn/addnew.png');
+  background-size: cover;
+}

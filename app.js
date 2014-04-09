@@ -39,7 +39,9 @@ Ext.application({
     	'System'
     ],
     stores:[
-    	'Systems'
+    	'Systems',
+    	'TestATMs',
+    	'TestSavings'
 
 	],
 	startupImage: {

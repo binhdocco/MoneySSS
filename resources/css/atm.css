@@ -1,4 +1,23 @@
-.atm-tienmat {
+.atm-tienmat, .atm-atm  {
 	margin-left: 10px;
 	font-size: 20px;
 }
+
+.atm-atmlist .info {
+	float: left;
+}
+
+.atm-atmlist .amount {
+	float: right;
+	margin-right: 30px;
+}
+
+.atm-savinglist .info {
+	float: left;
+}
+
+.atm-savinglist .amount {
+	float: right;
+	margin-right: 30px;
+}
+

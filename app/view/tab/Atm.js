@@ -2,7 +2,8 @@ Ext.define('MyApp.view.tab.Atm', {
     extend: 'MyApp.view.component.NavigationViewBase',
     xtype: 'tab_atm',
     requires: [
-		
+		'MyApp.view.tab.atm.Atm',
+		'MyApp.view.tab.atm.Saving'
 	],
     config: {      
 		scrollable:true,
@@ -25,7 +26,7 @@ Ext.define('MyApp.view.tab.Atm', {
 						items:[
 							{
 								xtype: 'label',
-								html:'Tien mat',
+								html:'Tiền mặt',
 								cls:'atm-tienmat'
 							},
 							{
@@ -39,10 +40,25 @@ Ext.define('MyApp.view.tab.Atm', {
 							{
 								xtype: 'button',								
 								title: 'moneyadd',
-								iconCls: 'toolbar-icon-add'
+								cls: 'button-icon',
+								iconCls: 'button-icon-addnew'
 							}
 						]
-					}
+					},
+					{
+						xtype:'tab_atm_atm',
+						style: {
+							'background-color': '#CCC'
+						},
+						height: 70*2 + 20,
+					},
+					{
+						xtype:'tab_atm_saving',
+						style: {
+							'background-color': '#999'
+						},
+						height: 80*2 + 20,
+					},
 				]
 			}
 		]			
