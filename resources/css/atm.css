@@ -1,4 +1,14 @@
-.atm-tienmat, .atm-atm  {
+.atm-title-container {
+	height: 50px;
+	background-color: #333;
+	color: #fff;
+	margin-bottom: 1px;
+}
+.atm-popup-container {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.atm-title-item {
 	margin-left: 10px;
 	font-size: 20px;
 }

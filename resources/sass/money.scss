@@ -1,4 +1,5 @@
 $ios7-blue: #fff;
+$fontName: 'ROBOTO-LIGHT';
 
 @import 'sencha-touch/cupertino-crestor';
 @import 'sencha-touch/cupertino-crestor/all';
@@ -9,30 +10,14 @@ $ios7-blue: #fff;
 //@include font-face('ROBOTO-BLACK', inline-font-files('roboto/Roboto-Black.ttf', opentype));
 //@include font-face('ROBOTO-MEDIUM', inline-font-files('roboto/Roboto-Medium.ttf', opentype));
 @include font-face('ROBOTO-LIGHT', inline-font-files('roboto/Roboto-Light.ttf', opentype));
+//@include font-face('ROBOTO-MD', inline-font-files('other/ITCAVANTGARDESTD-MD.OTF', opentype));
+//@include font-face('ROBOTO-BK', inline-font-files('other/ITCAVANTGARDESTD-BK.OTF', opentype));
 
-.tabbar-icon-home {
-	background-image: url('../images/icon/home.png');
-	background-size: cover;
-}
-
-.toolbar-icon-menu {
-  background-image: url('../images/menu_icon.png');
-  background-size: cover;
-}
-
-.toolbar-icon-add {
-  background-image: url('../images/add_icon.png');
-  background-size: cover;
-}
-
-
-.button-rectangle {
-	background-image: url('../images/button_bg.png');	
-}
 //OVERRIDE tab/_Panel.scss
 //change bg img + font of toolbar
 .x-toolbar{
-  background-color:#33B5E5;
+  //background-color:#33B5E5;
+  background-image: url('../images/top_nav_bg.png');
   .x-title {
     color: #fff;
     font-weight: 500;
@@ -43,13 +28,13 @@ $ios7-blue: #fff;
 
 //change bg img of bottom tabbar
 .x-tabbar.x-docked-bottom  {
-   background-color:#33B5E5;
+   background-color:#0099CC;//33B5E5;
 }
 
 //change bg img of active item in bottom tabbar
 .x-tabbar.x-docked-bottom .x-tab-active { 
   //background-image: url('../images/Bottom_navi_active.png');
-  background-color:#0099CC;
+  background-color:#33B5E5;//0099CC;
 }
 
 //change button width + remove margin between each buttons on tabbar
@@ -67,11 +52,12 @@ $ios7-blue: #fff;
 .x-tab {  
   .x-button-icon {
     display: block;
-    width: 2em;//width of icon image
-    height: 2em;//height of icon image 
-    margin: 0.5em auto;//cover the title text
-    -webkit-text-stroke-width: .35px;
-    -webkit-text-stroke-color: $ios7-blue;
+   width: 1.8em;
+  height: 1.8em;
+  margin: 2px auto;
+  margin-bottom: -7px;
+  -webkit-text-stroke-width: .35px;
+  -webkit-text-stroke-color: #fff;
 
     .x-button-icon.x-hidden {
       display: none;
@@ -82,6 +68,11 @@ $ios7-blue: #fff;
       font-size: 1.8em;
       line-height: 1.35em;
     }
+  }
+  
+  .x-button-label, .x-tab .x-badge {
+    color: #fff;
+    font-family: $fontName;
   }
 }
 //remove round border on top of toolbar

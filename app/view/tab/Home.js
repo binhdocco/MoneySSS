@@ -7,7 +7,7 @@ Ext.define('MyApp.view.tab.Home', {
     config: {      
 		scrollable:true,
 		iconCls:'tabbar-icon-home',
-		//title:'Home',
+		title: 'Trang chủ',
 		items:[
 			{
 				xtype:'container',

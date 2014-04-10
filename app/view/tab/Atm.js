@@ -6,6 +6,7 @@ Ext.define('MyApp.view.tab.Atm', {
 		'MyApp.view.tab.atm.Saving'
 	],
     config: {      
+    	title:'ATM',
 		scrollable:true,
 		iconCls:'tabbar-icon-home',	
 		items:[
@@ -17,17 +18,19 @@ Ext.define('MyApp.view.tab.Atm', {
 						xtype:'container',
 						layout: {
 							type: 'hbox',
-							align: 'center'
+							align: 'center',
+							pack: 'center'
 						},
-						style: {
-							'background-color': '#999'
-						},
+						cls:'atm-title-container',
 						
 						items:[
 							{
 								xtype: 'label',
 								html:'Tiền mặt',
-								cls:'atm-tienmat'
+								cls:'atm-title-item'
+							},
+							{
+								xtype: 'spacer'
 							},
 							{
 								xtype: 'label',
@@ -47,17 +50,13 @@ Ext.define('MyApp.view.tab.Atm', {
 					},
 					{
 						xtype:'tab_atm_atm',
-						style: {
-							'background-color': '#CCC'
-						},
-						height: 70*2 + 20,
+						
+						//height: 70*2 + 20,
 					},
 					{
 						xtype:'tab_atm_saving',
-						style: {
-							'background-color': '#999'
-						},
-						height: 80*2 + 20,
+						
+						//height: 80*2 + 20,
 					},
 				]
 			}

@@ -58,7 +58,7 @@ Ext.application({
         144: 'resources/icons/icon@144.png'
     },
 	views: ['App','AppMenu'],
-    controllers: ['App', 'TabHome', 'TabExpense'],
+    controllers: ['App', 'TabHome', 'TabExpense','TabAtm'],
     launch: function() {
     	//if(!App.util.CommonUtil.runningDevice()){
     		this.onDeviceReady();

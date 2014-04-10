@@ -8,7 +8,7 @@ Ext.define('MyApp.controller.TabHome', {
         },//end refs
         control: {
 			thisTab: {
-				initialize: 'onTabInit'
+				//initialize: 'onTabInit'
 			}
 		}
     },

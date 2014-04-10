@@ -1,6 +1,6 @@
 body {
-	/*font-family: 'ROBOTO-LIGHT';*/
-	font-family: 'Arial';
+	font-family: 'ROBOTO-LIGHT';
+	/*font-family: 'ROBOTO-BK';*/
 }
 
 /*REVEAL MENU*/
@@ -81,6 +81,40 @@ body {
 	/*font-family: 'ROBOTO-LIGHT';*/
 }
 
+/*FORM*/
+.x-form-label {
+	padding-right: 7.6em;
+	font-family: 'ROBOTO-LIGHT';
+	font-size: 14px;
+}
+
+.x-form-fieldset-title {
+	font-size: 1.2em;
+	font-family: 'ROBOTO-LIGHT';
+}
+
+/*ICONS*/
+.tabbar-icon-home {
+	background-image: url('../images/icon/home.png');
+	background-size: 28px;
+  background-repeat: no-repeat;
+}
+
+.toolbar-icon-menu {
+  background-image: url('../images/menu_icon.png');
+  background-size: cover;
+}
+
+.toolbar-icon-add {
+  background-image: url('../images/add_icon.png');
+  background-size: cover;
+}
+
+
+.button-rectangle {
+	background-image: url('../images/button_bg.png');	
+}
+
 .button-icon {
 	background-color: transparent;
 	border: 0;
@@ -89,4 +123,25 @@ body {
 .button-icon-addnew {
   background-image: url('../images/btn/addnew.png');
   background-size: cover;
+}
+
+.button-submit {
+  background-color:#f27935;
+  color: #FFFFFF;
+  border: 0px;
+  height: 45px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: 'ROBOTO-LIGHT';
+}
+.button-cancel {
+  background-color:#ebebeb;
+  border: 0px;
+  height: 45px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: 'ROBOTO-LIGHT';
+}
+.button-cancel .x-button-label{
+  color: #75706a;
 }

@@ -13,13 +13,15 @@ Ext.define('MyApp.view.tab.atm.Atm', {
 				xtype:'container',
 				 layout:{
 					type:'hbox',
-					align:'center'
+					align:'center',
+					pack:'center'
 				},
+				cls:'atm-title-container',
 				items:[
 					{
 						xtype: 'label',
-						html:'ATM',
-						cls:'atm-atm'
+						html:'Thẻ ATM',
+						cls:'atm-title-item'
 					},
 					{
 						xtype: 'spacer'
