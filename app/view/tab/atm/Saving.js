@@ -19,6 +19,11 @@ Ext.define('MyApp.view.tab.atm.Saving', {
 				cls:'atm-title-container',
 				items:[
 					{
+						xtype: 'image',			
+						src: 'resources/images/coloricons/dollar-folder-icon.png',					
+						cls:'atm-title-item-icon'
+					},
+					{
 						xtype: 'label',
 						html:'Sổ tiết kiệm',
 						cls:'atm-title-item'
