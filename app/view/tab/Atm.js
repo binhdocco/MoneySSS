@@ -25,6 +25,11 @@ Ext.define('MyApp.view.tab.Atm', {
 						
 						items:[
 							{
+								xtype: 'image',			
+								src: 'resources/images/coloricons/money-wallet-icon.png',					
+								cls:'atm-title-item-icon'
+							},
+							{
 								xtype: 'label',
 								html:'Tiền mặt',
 								cls:'atm-title-item'
@@ -35,11 +40,8 @@ Ext.define('MyApp.view.tab.Atm', {
 							{
 								xtype: 'label',
 								html:'100.000 (đ)',
-								cls:'atm-tienmat'
-							},
-							{
-								xtype: 'spacer'
-							},
+								cls:'atm-tienmat-amount'
+							},							
 							{
 								xtype: 'button',								
 								title: 'moneyadd',

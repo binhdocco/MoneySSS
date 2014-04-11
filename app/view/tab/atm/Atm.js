@@ -19,6 +19,11 @@ Ext.define('MyApp.view.tab.atm.Atm', {
 				cls:'atm-title-container',
 				items:[
 					{
+						xtype: 'image',			
+						src: 'resources/images/coloricons/Credit-Card-icon.png',					
+						cls:'atm-title-item-icon'
+					},
+					{
 						xtype: 'label',
 						html:'Thẻ ATM',
 						cls:'atm-title-item'

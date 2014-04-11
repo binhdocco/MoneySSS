@@ -36,10 +36,13 @@ Ext.application({
 		'Ext.ux.TimePicker'*/
     ],   
     models:[
-    	'System'
+    	'System',
+    	'Atm'
     ],
     stores:[
     	'Systems',
+    	'Atms',
+    	
     	'TestATMs',
     	'TestSavings'
 

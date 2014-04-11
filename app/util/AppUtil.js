@@ -1,8 +1,16 @@
 Ext.define('MyApp.util.AppUtil',{
+	alternateClassName: 'AppUtil',
 	singleton: true,
 	dbConnection: null,
 	_lang: 'en',
 	moneyUnit: '(đ)',
+	
+	//STATUS
+	STATUS_IN_USE: 'in_use',
+	//TITLE
+	TITLE_ERROR_INPUT: 'Lỗi nhập',
+	//MESSAGE
+	MESSAGE_NOT_FILLED_INPUT: 'Chưa điền đầy đủ thông tin',
 	
 	setLang:function(lang){
 		this._lang = lang;

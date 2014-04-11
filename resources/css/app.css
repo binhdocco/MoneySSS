@@ -60,6 +60,10 @@ body {
 .x-button {
 	border-radius: 5px;
 }
+.x-button-label {
+	color: white;
+	font-family: 'ROBOTO-LIGHT';
+}
 /*
 .x-input-el {	
 	background: none;
@@ -135,13 +139,12 @@ body {
   font-family: 'ROBOTO-LIGHT';
 }
 .button-cancel {
-  background-color:#ebebeb;
+ background-color:#666057;/*ebebeb*/
+color: #FFFFFF;
   border: 0px;
   height: 45px;
   margin-left: 20px;
   margin-right: 20px;
   font-family: 'ROBOTO-LIGHT';
 }
-.button-cancel .x-button-label{
-  color: #75706a;
-}
+

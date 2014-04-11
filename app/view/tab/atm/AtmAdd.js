@@ -5,7 +5,7 @@ Ext.define('MyApp.view.tab.atm.AtmAdd', {
     	 
     ],
     config: {
-    	title: 'Tạo tài khoản',
+    	title: 'Thêm tài khoản',
         layout:{
 			type:'vbox'
 		},
@@ -35,7 +35,7 @@ Ext.define('MyApp.view.tab.atm.AtmAdd', {
                     },
                      {
                         xtype: 'numberfield',
-                        name: 'money',
+                        name: 'amount',
                         placeHolder:'0 (đ)',
                         label: 'Số tiền hiện có  '
                     },
@@ -54,7 +54,7 @@ Ext.define('MyApp.view.tab.atm.AtmAdd', {
 					},
 					{
 						xtype: 'button',
-						text: 'TẠO',
+						text: 'THÊM',
 						cls:'button-submit',
 						flex: 1,
 						title: 'atmaddsubmitbutton'
@@ -65,6 +65,56 @@ Ext.define('MyApp.view.tab.atm.AtmAdd', {
     },
 	initialize: function() {
 		this.callParent(arguments);
-		//this.assignFields(true, true);
+		this.assignFields();
+	},
+	
+	//call from Controller
+	addAtm: function(callback) {
+		var name = this._nameTF.getValue();
+		var bank = this._bankTF.getValue();
+		var amount = this._amountTF.getValue();
+		
+		if (amount == '' || amount == null) amount = '0';		
+		
+		if (!name || !bank) {
+			MyApp.app.fireEvent('show_alert', AppUtil.TITLE_ERROR_INPUT, AppUtil.MESSAGE_NOT_FILLED_INPUT);
+			return false;
+		}
+		name = name.trim();
+		bank = bank.trim();
+		//amount = amount.trim();
+		
+		console.log(name, bank, amount);
+		
+		var atmModel = Ext.create('MyApp.model.Atm', {
+			username: name,
+			bank: bank,
+			amount: amount,
+			status: AppUtil.STATUS_IN_USE
+		});
+		
+		atmModel.save(function(){
+			callback();
+		});
+		
+		return true;
+	},
+	
+	resetView: function(){
+		this._nameTF.setValue('');
+		this._bankTF.setValue('');
+		this._amountTF.setValue('');
+	},
+	
+	assignFields: function() {
+		if (!this._nameTF) {
+			this._nameTF = this.down('textfield[name = "name"]');
+		}
+		if (!this._bankTF) {
+			this._bankTF = this.down('textfield[name = "bank"]');
+		}
+		if (!this._amountTF) {
+			this._amountTF = this.down('textfield[name = "amount"]');
+		}
 	}
  });   

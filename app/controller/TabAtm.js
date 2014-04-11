@@ -6,7 +6,9 @@ Ext.define('MyApp.controller.TabAtm', {
     config: {
         refs: {		
 			thisTab: 'tab_atm',
-			thisMenuButton: 'tab_atm button[iconCls = "toolbar-icon-menu"]'
+			thisMenuButton: 'tab_atm button[iconCls = "toolbar-icon-menu"]',
+			thisAtmAdd: 'tab_atm_atmadd',
+			thisAtmList: 'tab_atm_atmlist'
         },//end refs
         control: {
 			thisTab: {
@@ -22,9 +24,29 @@ Ext.define('MyApp.controller.TabAtm', {
 				tap: function() {
 					//console.log('tap tap');
 					var atmAddView = this.getAtmAddView();
+					atmAddView.resetView();
 					this.getThisTab().push(atmAddView);
 				}
-			}
+			},
+			//AtmAdd
+			'tab_atm_atmadd button[title = "atmaddcancelbutton"]': {
+				tap: function() {
+					this.getThisTab().onBackButtonTap();	
+				}				
+			},
+			'tab_atm_atmadd button[title = "atmaddsubmitbutton"]': {
+				tap: function() {
+					var me = this;
+					if (me.getThisAtmAdd().addAtm(
+						function() {
+							me.getThisAtmList().updateStore();
+						})
+					) {						
+						me.getThisTab().onBackButtonTap();	
+					}						
+				}				
+			},
+			//end AtmAdd
 		}
     },
 	

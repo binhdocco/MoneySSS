@@ -3,18 +3,21 @@ Ext.define('MyApp.view.tab.atm.AtmList', {
     xtype: 'tab_atm_atmlist',
     config: { 
     	cls: 'atm-atmlist',
-		store: 'TestATMs',  	
+		store: 'Atms',  	
        	itemTpl: new Ext.XTemplate(
        				//'<div class="thumb">{dd}<br/>{monthname}</div>',
 					['<div class="info">',
-						'<div class="username">Tên: {username}</div>',
-						'<div class="bank">Ngân hàng: {bank}</div>',
+						'<div class="username">{username:this.upper}</div>', //Tên: 
+						'<div class="bank">{bank:this.upper}</div>', //Ngân hàng: 
 					'</div>',
 					'<div class="amount">{amount:this.format} (đ)</div>',
 					].join(''),
 					{
+						upper:function(s) {
+							return s.toUpperCase()
+						},
 						format: function(amount) {
-							return amount.format(0, 3, '.');
+							return parseInt(amount).format(0, 3, '.');
 						}	
 					}
        		),
@@ -28,5 +31,16 @@ Ext.define('MyApp.view.tab.atm.AtmList', {
 	initialize: function() {
 		this.callParent(arguments);
 		//Ux.locale.Manager.applyLocaleForCmp(this);
+		this.updateStore();
+	},
+	
+	updateStore: function() {
+		if (!this._atmStore) {
+			this._atmStore = Ext.getStore('Atms');
+		}
+		var list = this;
+		this._atmStore.load(function(records) {
+			list.setHeight(60*records.length);
+		});
 	}
 });
